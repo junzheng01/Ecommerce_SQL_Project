@@ -38,7 +38,7 @@ CREATE TABLE ECommerce (
     Review_Sentiment Varchar(20)
 );
 ```
-#Data Cleaning
+## Data Cleaning
 Before performing any analysis, it's crucial to clean the data by removing any rows with missing values.
 
 ```sql
@@ -101,6 +101,7 @@ GROUP BY customer_gender;
 ```
 
 Product Performance
+
 B.1 Rank Sub-Categories in the Beauty Category by Most Products Sold
 This query ranks sub-categories within the Beauty category based on the number of products sold.
 ```sql
@@ -111,7 +112,7 @@ FROM Ecommerce
 WHERE Category = 'Beauty'
 GROUP BY Sub_category;
 ```
-#B.2 Average Price by Category and Sub-Category
+B.2 Average Price by Category and Sub-Category
 This query calculates the average price for each category and sub-category.
 
 ```sql
@@ -120,7 +121,7 @@ FROM Ecommerce
 GROUP BY category, sub_category
 ORDER BY "Average Price";
 ```
-#B.3 Products with the Highest and Lowest Prices
+B.3 Products with the Highest and Lowest Prices
 These queries identify the top 5 highest and lowest priced products.
 ```sql
 -- Highest priced products
@@ -136,6 +137,7 @@ ORDER BY Price ASC
 LIMIT 5;
 ```
 Review Analysis
+
 C.1 Distribution of Review Ratings
 This query categorizes reviews by rating and calculates the percentage distribution.
 ```sql
